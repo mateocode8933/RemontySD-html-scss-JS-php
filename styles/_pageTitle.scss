@@ -1,0 +1,131 @@
+// PAGE TITLE SECTION WITH C2A BUTTON START ------------------------------------
+
+// TITLE WITH NAME ----------------------------------
+.page-title {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.74);
+  background-image: url("/landingbackground2.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-title__name {
+  border-top: 2px solid $MainYellowColor;
+  border-bottom: 2px solid $MainYellowColor;
+  padding: 0.5rem 0em;
+}
+
+.page-title__name h1 {
+  font-size: 5.2em;
+  font-weight: bolder;
+  color: $MainYellowColor;
+  font-family: Impact, "Merriweather", serif;
+  letter-spacing: 3px;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(100vw);
+
+  &.active {
+    transform: translateX(0vw);
+  }
+}
+
+.page-title__name p {
+  font-size: 1.8em;
+  color: $MainWhiteColor;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-100vw);
+
+  &.active {
+    transform: translateX(0vw);
+  }
+}
+
+// C2A BUTTON --------------------------------
+
+.page-title__btn button {
+  background: transparent;
+  color: $MainYellowColor;
+  border: 2px solid $MainYellowColor;
+  margin-top: 3rem;
+  padding: 1.3rem;
+  border-radius: 5px;
+  transition: 1s;
+
+  transform: scale(0);
+
+  &.active {
+    transform: scale(1);
+  }
+}
+
+// ----------------------------------------------------------
+// PAGE TITLE SECTION WITH C2A BUTTON END ------------------------------------
+
+// MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES --------------------------
+
+@media only screen and (min-width: 720px) {
+  .page-title__name h1 {
+    font-size: 7.5em;
+  }
+
+  .page-title__name p {
+    font-size: 2.5em;
+  }
+
+  // C2A BUTTON --------------------------------
+
+  .page-title__btn button {
+    padding: 2rem 3rem;
+    font-size: 1.4em;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-title {
+    background-color: rgba(0, 0, 0, 0.74);
+    background-image: url("/landingbackground1.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    padding-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .page-title__name h1 {
+    font-size: 9em;
+  }
+
+  .page-title__btn button:hover {
+    background: $MainYellowColor;
+    color: $MainDarkColor;
+    border: 2px solid $MainDarkColor;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .page-title__name h1 {
+    font-size: 12em;
+  }
+
+  .page-title__name p {
+    font-size: 3em;
+  }
+
+  .page-title__btn button {
+    margin-top: 4em;
+    font-size: 1.7em;
+  }
+}

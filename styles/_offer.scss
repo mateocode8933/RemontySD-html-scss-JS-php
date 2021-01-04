@@ -1,0 +1,73 @@
+// ASSIDE OFFER WITH ICONS START -------------------------------------
+
+// ASIDE OFFER ICONS WITH DESCRIPTION
+
+.offer__desc {
+  display: grid;
+  height: max-content;
+  padding: 2em;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  text-align: center;
+  margin-top: 3.5rem;
+  gap: 3em;
+  background: whitesmoke;
+}
+
+.offer__desc-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.offer__desc-item__icon {
+  font-size: 5.5em;
+  color: $MainYellowColor;
+  margin-bottom: 0.1em;
+  font-weight: bold;
+}
+.offer__desc-item img {
+  width: 90px;
+  height: 65px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.offer__desc-item__info {
+  width: 50%;
+  margin: 0px auto;
+  font-size: 1.8em;
+  color: $MainDarkColor;
+  font-weight: bold;
+}
+
+// MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+//
+
+@media only screen and (min-width: 600px) {
+  .offer__desc {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .offer__desc {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .offer__desc-item__icon {
+    font-size: 7.5em;
+  }
+  .offer__desc-item__info {
+    letter-spacing: 1.2px;
+    font-size: 1.9em;
+  }
+}

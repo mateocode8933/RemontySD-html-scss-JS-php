@@ -1,0 +1,175 @@
+// CONTACT FORM START -----------------------------------------------------------
+
+.contact-form-title {
+  font-size: 1.4em;
+}
+
+.contact-form {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.89);
+  background-image: url("/img/contactformImage.jpeg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.contact-form div {
+  width: 100%;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 750px;
+}
+
+.contact__name-input,
+.contact__email-input,
+.contact__message-input,
+.contact__submit-button {
+  width: 80%;
+  margin: 0.8em auto;
+  padding: 0.7em;
+  color: $SubWhiteColor;
+  border: none;
+  background: transparent;
+
+  &::placeholder {
+    color: $SubWhiteColor;
+    font-size: 1.3em;
+  }
+}
+
+.contact-form input {
+  border-bottom: 2px solid $MainYellowColor;
+}
+
+.contact-form textarea {
+  border: 2px solid $MainYellowColor;
+  margin-top: 3em;
+}
+
+.contact__submit-button {
+  background: transparent;
+  color: $MainYellowColor;
+  border: 2px solid $MainYellowColor;
+  font-size: 2.3em;
+  padding: 0.2em;
+  border-radius: 5px;
+
+  &:hover {
+    background: $MainDarkColor;
+  }
+}
+
+// CONTACT FORM DIRECT CONTACT
+
+.direct-contact {
+  color: $MainYellowColor;
+  font-size: 1.5em;
+  padding: 1em;
+  margin-top: 0.5em;
+}
+
+.direct-contact div {
+  margin: 0.2em 2em;
+  text-align: left;
+}
+
+.direct-contact span {
+  margin-left: 0.5em;
+}
+
+// CONTACT FORM ERROR MESSAGE
+.contact__error-message {
+  font-size: 2em;
+  color: whitesmoke;
+  background: red;
+  margin: 1em;
+}
+
+// MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+
+@media only screen and (min-width: 520px) {
+  .direct-contact {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .direct-contact {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .contact-form {
+    display: flex;
+    padding: 1em;
+  }
+
+  form {
+    flex: 3;
+  }
+
+  .direct-contact {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding: 0.2em;
+    border: 2px solid $MainYellowColor;
+    height: 30%;
+    margin: auto 0.5em;
+  }
+
+  .direct-contact div {
+    margin: 0.2em 0.5em;
+    text-align: left;
+  }
+
+  .direct-contact span {
+    margin-left: 0.2em;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .direct-contact {
+    padding: 0.7em;
+    max-width: 370px;
+  }
+
+  form.contact {
+    max-width: 750px;
+  }
+
+  .contact-form {
+    padding: 1em 5em;
+    background-image: url("/contactFormImage2.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contact-form {
+    justify-content: space-around;
+    padding: 1em 9em;
+  }
+}
+
+@media only screen and (min-width: 1470px) {
+  .contact-form {
+    padding: 1em 20em;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .contact-form {
+    padding: 1em 35em;
+  }
+}

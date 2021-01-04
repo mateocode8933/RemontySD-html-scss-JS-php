@@ -1,0 +1,135 @@
+// SERVICES MAIN SECTION START -------------------------------------------
+
+// SERVICES DESCRIPTION WITH GALLERY
+.services-title {
+  font-size: 1.4em;
+}
+
+.services__description {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  width: 98vw;
+  margin: 0 auto;
+  height: fit-content;
+  position: relative;
+}
+
+// SERVICE DIV
+.service {
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  object-fit: fill;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: 0.1em solid $MainYellowColor;
+}
+
+.service img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-position: inherit;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+div.service:nth-child(1) > img:nth-child(2) {
+  object-position: 75% 30%;
+}
+
+div.service:nth-child(6) > img:nth-child(2) {
+  object-position: 40% 20%;
+}
+
+.service-name {
+  position: absolute;
+  font-size: 2em;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0%);
+  background-color: $MainYellowColor;
+  color: $MainDarkColor;
+  opacity: 0.9;
+  padding: 0.5em 1em;
+  font-size: 1.7em;
+  z-index: 10;
+}
+
+.service-footer {
+  text-align: center;
+  width: 50%;
+  border-radius: 5px;
+  grid-column: 1/-1;
+  margin: 2rem auto;
+  font-size: 2rem;
+  font-weight: bold;
+  background: $MainYellowColor;
+  color: $MainDarkColor;
+  padding: 0.5rem;
+}
+
+// MEDIA QUERIES  MEDIA QUERIES  MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+//
+
+@media only screen and (min-width: 500px) {
+  .services__description {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .service-name {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  .service {
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .service-name {
+    font-size: 1.9em;
+  }
+
+  .service-footer {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .services {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .services__description {
+    gap: 3px;
+    width: 100%;
+  }
+
+  .service-name {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .service-footer {
+    margin-top: 4rem;
+  }
+
+  .services__description {
+    height: 70vh;
+    gap: 10px;
+  }
+}

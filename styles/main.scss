@@ -1,0 +1,128 @@
+// Resets
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Global
+
+html {
+  font-size: 10px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: whitesmoke;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page-content-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1050px) {
+  .page-content-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+// Colors
+
+$MainDarkColor: #0e0c0c;
+$MainYellowColor: #dfd020;
+$MainWhiteColor: #ffffff;
+$SubWhiteColor: whitesmoke;
+
+// HEADER
+@import "header";
+@import "pageTitle";
+@import "about";
+@import "services";
+@import "offer";
+@import "contact-form";
+
+.page-footer {
+  background: black;
+  color: rgb(192, 178, 178);
+  text-align: center;
+  padding: 0.8em;
+  font-size: 1.2em;
+  transform: translateX();
+}
+
+// SPACE BETWEEN SECTIONS  {
+
+.space-between-sections {
+  height: 20vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-weight: 2em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.space-between-sections span {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  background: $MainYellowColor;
+  border: 1px solid $MainDarkColor;
+}
+
+.space-between-sections span:nth-child(2) {
+  width: 7px;
+  height: 7px;
+}
+
+.space-between-sections span:nth-child(3) {
+  height: 5px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+// PAGE TITLE DIV COMPONENT
+.section__name {
+  width: max-content;
+  padding: 0.5em 1em;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: $MainDarkColor;
+  color: $MainWhiteColor;
+  position: relative;
+  border-radius: 5px;
+}
+
+.section__name h1 {
+  padding: 0;
+}
+
+.section__name h1 span {
+  color: $MainYellowColor;
+}
+
+@media only screen and (min-width: 750px) {
+  .section__name {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .section__name {
+    font-size: 2.7em;
+    margin: 2em auto;
+    background: $MainDarkColor;
+  }
+}

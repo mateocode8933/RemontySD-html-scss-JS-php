@@ -1,0 +1,294 @@
+// MOBILE HEADER START -------------------------------------------------
+.mobile-header {
+  height: 10vh;
+  z-index: 100;
+  background: $MainDarkColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $MainYellowColor;
+  top: 0;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.mobile-header.fixed {
+  position: fixed;
+  opacity: 0.9;
+}
+
+// Mobile Header Contact Icons
+.mobile-header__contact {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.mobile-header__contact p span {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+// Icons
+.icn {
+  height: 22px;
+  width: 28px;
+}
+.icnbar {
+  height: 35px;
+  width: 45px;
+}
+
+// Mobile Header Menu Icon
+
+.mobile-header__menu-icon {
+  font-size: 4.5em;
+  margin-right: 0.4em;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-header__menu-icon.show {
+  transform: rotate(-90deg);
+}
+
+// MOBILE EXPANDING NAVIGATION MENU --------------
+
+// NAVIGATION DIV
+.mobile-navigation {
+  width: 100vw;
+  height: 90vh;
+  text-align: center;
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: $MainDarkColor;
+  z-index: 20;
+  position: absolute;
+  top: 10vh;
+  transform: translateX(100vw);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+
+  // NAVIGATION UL
+  &-list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  // NAVIGATION LI
+  &-item {
+    position: relative;
+    width: 40vw;
+    padding: 0.7em;
+  }
+
+  // NAVIGATION <a>
+  &-link {
+    color: $MainYellowColor;
+    text-decoration: none;
+    font-size: 2em;
+  }
+}
+
+.mobile-navigation.show {
+  transform: translateX(0);
+  overflow: hidden;
+}
+
+// MOBILE HEADER END ----------------------------------------------------------
+
+// DESKTOP HEADER START -------------------------------------------------------
+
+.desktop-header {
+  display: none;
+}
+
+// Desktop Header Contact Icons
+.desktop-header__contact {
+  background-color: $MainDarkColor;
+  color: $MainYellowColor;
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  font-size: 1.8em;
+  padding-left: 23vw;
+}
+
+.contact-icon {
+  margin: 1em;
+}
+
+.contact-icon span {
+  margin-left: 0.3em;
+}
+
+// DESKTOP HEADER NAVIGATION START -----------------------------------------------------------
+
+.desktop-header__navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3vh;
+  background-color: $MainYellowColor;
+  padding: 4em 1em;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+  top: 0;
+}
+
+.desktop-header__navigation.fixed {
+  position: fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
+// DESKTOP HEADER LOGO
+
+.desktop-header__logo span {
+  transition: all 0.3s ease-in-out;
+}
+
+.desktop-header__logo a {
+  text-decoration: none;
+  color: $MainDarkColor;
+}
+
+.desktop-header__logo {
+  font-size: 4em;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+  flex: 2;
+  cursor: pointer;
+
+  &:hover .logo-title {
+    background-color: $MainDarkColor;
+    color: $MainYellowColor;
+  }
+
+  &:hover .logo-sub-title {
+    background-color: $MainYellowColor;
+    color: #161515;
+  }
+}
+
+.logo-title {
+  border: 2px solid $MainDarkColor;
+  padding: 0.2em;
+  font-weight: bold;
+}
+
+.logo-sub-title {
+  background-color: $MainDarkColor;
+  padding: 0.2em;
+  color: $MainYellowColor;
+  border: 2px solid $MainDarkColor;
+  font-weight: bold;
+}
+
+// DESKTOP HEADER NAV MENU
+
+.desktop-header__menu {
+  flex: 2.5;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+  font-weight: bold;
+  height: 100%;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: $MainDarkColor;
+  position: relative;
+  padding: 0.8em 0.3em;
+  min-width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+
+// MENU LINKS HOVER EFFECT START ---------------------------------------------
+.menu-link:hover.menu-link {
+  color: whitesmoke;
+  padding-right: 1em;
+}
+
+.menu-link::after,
+.menu-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border: 0px solid;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  z-index: 5;
+}
+
+.menu-link::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+
+  z-index: -190;
+  background: rgb(0, 0, 0);
+}
+
+.menu-link::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+
+  z-index: -190;
+  background: rgb(255, 208, 0);
+}
+
+.menu-link:hover:after,
+.menu-link:hover:before {
+  width: 105%;
+  height: 105%;
+  border: 2px solid black;
+}
+
+.menu-link.active::before,
+.menu-link.active::after {
+  width: 105%;
+  height: 105%;
+  border: 2px solid black;
+}
+
+// MENU LINKS HOVER EFFECT END ---------------------------------------------
+
+//
+//
+//
+// MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES --------------------------
+
+@media only screen and (min-width: 1000px) {
+  .desktop-header {
+    display: block;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1250px) {
+    .menu-list {
+      padding: 0em 5em;
+    }
+  }
+}
